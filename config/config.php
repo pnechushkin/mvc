@@ -7,7 +7,7 @@
  */
 Config::set ('site_name','shvidko.com.ua');
 Config::set('routes' , array(
-	'default_routes' => 'default',
+	'default_routes' => 'index',
 	'admin' => 'admin_',
 	'manager' => 'manager_',
 	'user' => 'user_',

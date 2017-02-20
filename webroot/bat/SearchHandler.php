@@ -5,7 +5,7 @@ if(!isset($_GET['s'])) {
 
 $highlight = true;//highlight results or not
 $search_in = array('html', 'htm');//allowable filetypes to search in
-$search_dir = '..';//starting directory
+$search_dir = '../../views/pages';//starting directory
 $recursive = true;//should it search recursively or not
 define('SIDE_CHARS', 15);
 $file_count = 0;
@@ -82,7 +82,7 @@ else{
 <!DOCTYPE HTML>
 <html lang="en-US" class="search-frame">
 <head>
-	<title>Search results</title>
+	<title>Результаты поиска</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="../css/search.css">
 	<!--[if lt IE 9]>
