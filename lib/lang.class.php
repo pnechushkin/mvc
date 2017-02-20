@@ -16,6 +16,7 @@ class Lang {
 	public static function load ($lang_code){
 		$lang_file_path=ROOT.DS.'lang'.DS.strtolower($lang_code).'.php';
 		if (file_exists($lang_file_path)){
+			echo self::$data;
 			self::$data=include ($lang_file_path);
 		}
 		else {

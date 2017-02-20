@@ -13,9 +13,9 @@ class PagesController extends Controller {
 
 	public function index () {
 
-		$this->data['content']='indexScacasd test';
-		echo
-		 'Good';
+//		$this->data['content']='indexScacasd test';
+//		echo
+//		 'Good';
 
 	}
 	public function abaut () {
@@ -24,7 +24,11 @@ class PagesController extends Controller {
 		echo
 		'Good';
 
-	}public function view () {
+	}
+	public function search () {
+
+	}
+	public function view () {
 
 		$this->data['content']='indexScacasd test';
 		echo

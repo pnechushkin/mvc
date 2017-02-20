@@ -13,7 +13,7 @@ Config::set('routes' , array(
 	'user' => 'user_',
 ));
 Config::set ('languages',array('en', 'ru', 'uk'));
-Config::set ('default_route','default');
+Config::set ('default_route','index');
 Config::set ('default_languages','ru');
 Config::set ('default_controller','pages');
 Config::set ('default_action','index');

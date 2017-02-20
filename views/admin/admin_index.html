@@ -5,6 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-    admin_index mna sn
+    admin_index mna sn <?php $u=$_SERVER['REQUEST_URI'];$r=new Router($u); var_dump($r->getGetrequest())?>
 </body>
 </html>

@@ -51,5 +51,6 @@ class View {
 		include ($this->path);
 		$content = ob_get_clean();
 		return $content;
+
 	}
 }

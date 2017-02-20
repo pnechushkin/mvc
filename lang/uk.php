@@ -6,5 +6,7 @@
  * Time: 1:02
  */
 return array(
-'lang.test'=>'Українська версія',
+	'tariffs.menu'=>'Тарифи',
+	'contact.menu'=>'Контакти',
+	'how_find.title'=>'Як знайти',
 );

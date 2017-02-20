@@ -6,5 +6,7 @@
  * Time: 1:02
  */
 return array(
-'lang.test'=>'test text on en',
+	'tariffs.menu'=>'Tariffs',
+	'contact.menu'=>'Contacts',
+	'how_find.title'=>'How to find',
 );

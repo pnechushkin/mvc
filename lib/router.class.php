@@ -13,6 +13,16 @@ class Router {
 	protected $route;
 	protected $method_prefix;
 	protected $language;
+	protected $getrequest;
+
+	/**
+	 * @return mixed
+	 */
+	public function getGetrequest()
+	{
+
+		return $this->getrequest;
+	}
 
 	/**
 	 * @return mixed
@@ -75,9 +85,11 @@ class Router {
 		$this->action=Config::get('default_action');
 		$uri_parts=explode('?', $this->uri);
 		$path=$uri_parts[0];
-
+		$get_message=$uri_parts[1];
 		$path_parts=explode('/',$path);
-
+		if (!empty($get_message)){
+			$this->getrequest=$get_message;
+		}
 		if ( count($path_parts) ){
 			// Get route or language at first element
 			if ( in_array(strtolower(current($path_parts)), array_keys($routes)) ){
@@ -105,3 +117,4 @@ class Router {
 	}
 
 }
+
