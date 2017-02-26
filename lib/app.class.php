@@ -2,7 +2,7 @@
 /**
  * Created by PhpStorm.
  * User: Павел
- * Date: 15.11.2016
+ * Date: 26.11.2016
  * Time: 17:28
  */
 class App {
@@ -17,6 +17,7 @@ class App {
 	}
 
 	public static function run ($uri){
+
 		self::$router=new Router($uri);
 		Lang::load(self::$router->getLanguages());
 		$controller_class = ucfirst(self::$router->getController()).'Controller';

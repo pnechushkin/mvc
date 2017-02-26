@@ -5,7 +5,7 @@
  * Date: 07.02.2017
  * Time: 1:05
  */
-class Lang {
+class Lang  {
 	protected static $data;
 
 	public static function get ($key,$def_val=''){
@@ -14,14 +14,24 @@ class Lang {
 
 
 	public static function load ($lang_code){
+		$db=DataBase::getDB();
+		$query = "SELECT * FROM `leng` ";
+		$table = $db->select($query);
+		$rez =array();
+		for ($i=0; $i<count($table); $i++)
+		{
+			$k=$table[$i]['neme'];
+			$v=$table[$i][$lang_code];
+			$rez[$k]=$v;
+		}
+
 		$lang_file_path=ROOT.DS.'lang'.DS.strtolower($lang_code).'.php';
-		if (file_exists($lang_file_path)){
-			echo self::$data;
-			self::$data=include ($lang_file_path);
+		if (!empty($rez)){
+			self::$data=$rez;
 		}
 		else {
 
-			throw new Exception('Lang file not find '.$lang_file_path);
+			throw new Exception('Lang code not find '.$lang_code);
 		}
 	}
 }

@@ -6,7 +6,10 @@
  * Time: 17:56
  */
 require_once (ROOT.DS.'config'.DS.'config.php');
+require_once (ROOT.DS.'config'.DS.'connect.php');
+
 function __autoload ($class_name){
+
 	$lib_patch =ROOT.DS.'lib'.DS.strtolower($class_name).'.class.php';
 	$controllers_patch =ROOT.DS.'controllers'.DS.str_replace('controller', '', strtolower($class_name)).'.controller.php';
 	$models_patch =ROOT.DS.'models'.DS.strtolower($class_name).'.php';
@@ -23,6 +26,8 @@ function __autoload ($class_name){
 	else {
 		new Exception('File to include class: '.$class_name);
 	}
+;
+
 }
 
 function __ ($key,$def_val=''){

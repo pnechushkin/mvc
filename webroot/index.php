@@ -13,7 +13,6 @@ define('JS','webroot'.DS.ROOT.DS.'js'.DS);
 define('upl','webroot'.DS.ROOT.DS.'uplouds');
 define('VIEW',ROOT.DS.'views');
 
-
 require_once (ROOT.DS.'lib'.DS.'init.php');
 $url=$_SERVER['REQUEST_URI'];
 

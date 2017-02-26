@@ -7,7 +7,7 @@
  */
 Config::set ('site_name','shvidko.com.ua');
 Config::set('routes' , array(
-	'default_routes' => 'index',
+	'default_routes' => 'default',
 	'admin' => 'admin_',
 	'manager' => 'manager_',
 	'user' => 'user_',
@@ -17,3 +17,7 @@ Config::set ('default_route','index');
 Config::set ('default_languages','ru');
 Config::set ('default_controller','pages');
 Config::set ('default_action','index');
+Config::set ('dbhost','localhost');
+Config::set ('dbname','Test');
+Config::set ('dbuser','root');
+Config::set ('dbpass','');

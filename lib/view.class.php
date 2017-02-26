@@ -46,7 +46,7 @@ class View {
 	}
 	public function render () {
 
-		$data = $this->data;
+		//$data = $this->data;
 		ob_start();
 		include ($this->path);
 		$content = ob_get_clean();
